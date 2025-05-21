@@ -1,16 +1,17 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Download, Mail, ArrowDown } from "lucide-react"
-import SkillsSection from "@/components/skills-section"
-import ExperienceSection from "@/components/experience-section"
-import ProjectsSection from "@/components/projects-section"
-import ContactSection from "@/components/contact-section"
-import SocialLinks from "@/components/social-links"
-import EducationSection from "@/components/education-section"
-import { ThemeToggle } from "@/components/theme-toggle"
-import AnimatedBackground from "@/components/animated-background"
-import SectionHeading from "@/components/section-heading"
-import StatsSection from "@/components/stats-section"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Download, Mail, ArrowDown } from "lucide-react";
+import SkillsSection from "@/components/skills-section";
+import ExperienceSection from "@/components/experience-section";
+import ProjectsSection from "@/components/projects-section";
+import ContactSection from "@/components/contact-section";
+import SocialLinks from "@/components/social-links";
+import EducationSection from "@/components/education-section";
+import { ThemeToggle } from "@/components/theme-toggle";
+import AnimatedBackground from "@/components/animated-background";
+import SectionHeading from "@/components/section-heading";
+import StatsSection from "@/components/stats-section";
+import MobileNav from "@/components/mobile-nav";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
 
       {/* Fixed Navigation */}
       <div className="fixed top-0 w-full flex justify-center z-50 mt-4">
-        <nav className="bg-white/70 dark:bg-gray-900/70 shadow-sm rounded-full px-8 py-4 mx-auto backdrop-blur-md">
+        {/* Desktop Navigation */}
+        <nav className="bg-white/70 dark:bg-gray-900/70 shadow-sm rounded-full px-8 py-4 mx-auto backdrop-blur-md hidden md:block">
           <ul className="flex justify-center space-x-8">
             <li>
               <a
@@ -64,6 +66,11 @@ export default function Home() {
             </li>
           </ul>
         </nav>
+
+        {/* Mobile Navigation Button - Top Left */}
+        <div className="fixed top-4 left-4 z-50 md:hidden">
+          <MobileNav />
+        </div>
       </div>
 
       {/* Theme Toggle */}
@@ -75,38 +82,43 @@ export default function Home() {
       <div className="pt-20"></div>
 
       {/* Hero Section */}
-      <section id="home" className="container mx-auto py-16 text-center relative">
+      <section
+        id="home"
+        className="container mx-auto py-16 text-center relative"
+      >
         <div className="relative w-32 h-32 mx-auto mb-6 animate-float">
           <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-full opacity-30"></div>
-          <Image
-            src="/avatar.png"
-            alt="Muhammad Makinul Iman"
-            width={128}
-            height={128}
-            className="rounded-full object-cover relative z-10"
-          />
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <Image
+              src="/memoji.png"
+              alt="Muhammad Makinul Iman"
+              width={84}
+              height={84}
+              className="rounded-full object-cover"
+            />
+          </div>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2 animate-fade-in">
           Muhammad Makinul Iman
         </h1>
         <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in animation-delay-200">
-          Undergraduate Student System Information of Brawijaya University | Backend Developer | UI/UX Designer |
-          Freelance Graphic Designer
+          Undergraduate Student System Information of Brawijaya University |
+          Backend Developer | UI/UX Designer | Freelance Graphic Designer
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in animation-delay-400">
           <a href="mailto:akinmonsan@gmail.com?subject=Contact from Portfolio Website&body=Hello Muhammad Makinul Iman,%0D%0A%0D%0AI visited your portfolio website and would like to get in touch with you regarding...">
             <Button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0">
-              <Mail size={24} />
+              <Mail size={16} />
               Contact Me
             </Button>
           </a>
-          <a href="/CV_Makinul.pdf">
+          <a href="/CV_Makinul.pdf" download>
             <Button
               variant="outline"
               className="flex items-center gap-2 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-white/30 dark:hover:bg-gray-800/30"
             >
-              <Download size={24} />
+              <Download size={16} />
               Download CV
             </Button>
           </a>
@@ -124,7 +136,10 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-16 relative">
         <div className="container mx-auto">
-          <SectionHeading title="About Me" subtitle="Get to know more about me and my background" />
+          <SectionHeading
+            title="About Me"
+            subtitle="Get to know more about me and my background"
+          />
 
           <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
             <div className="w-full md:w-1/3">
@@ -141,17 +156,23 @@ export default function Home() {
             </div>
             <div className="w-full md:w-2/3">
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Hi! I'm Muhammad Makinul Iman, an Information Systems undergraduate at Brawijaya University with a GPA of 3.79.
-                I have a strong passion for software engineering, UI/UX design, and web development.
-                My interests in building functional, user-friendly applications that combine solid backend structure with intuitive user interfaces.
+                Hai! Saya Muhammad Makinul Iman, mahasiswa Sistem Informasi di
+                Universitas Brawijaya. Saya memiliki minat dan keahlian dalam
+                pengembangan web, UI/UX Design dan juga sebagai Freelance
+                Graphic Designer.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                I have hands-on experience in backend development, including building web applications and integrating secure systems.
-                In addition to my academic pursuits, I work as a freelance graphic designer, allowing me to continuously improve my creativity and design skills.
-                Currently, I’m actively involved in freelance projects while deepening my knowledge in programming and user interface design.
-                I am always eager to learn, grow, and contribute to impactful digital solutions.
+                Saya memiliki pengalaman dalam backend development dan membangun
+                aplikasi yang berfungsi baik. Saat ini saya aktif mengerjakan
+                beberapa project freelance dan memperdalam skill programming
+                serta desain antarmuka pengguna.
               </p>
-
+              <p className="text-gray-700 dark:text-gray-300">
+                As an Information Systems undergraduate with a GPA of 3.79, I am
+                passionate about software engineering and UI/UX design. Skilled
+                in web development, responsive design, and backend systems, I
+                excel in analytical thinking and problem-solving.
+              </p>
             </div>
           </div>
         </div>
@@ -178,9 +199,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-6 text-center text-gray-600 dark:text-gray-400 relative">
         <div className="container mx-auto">
-          <p>© {new Date().getFullYear()} Muhammad Makinul Iman. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Muhammad Makinul Iman. All rights
+            reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
