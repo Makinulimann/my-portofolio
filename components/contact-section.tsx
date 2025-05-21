@@ -93,12 +93,12 @@ export default function ContactSection() {
                     Instagram
                   </h4>
                   <a
-                    href="https://instagram.com/makinulimann"
+                    href="https://instagram.com/makinuliman"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
                   >
-                    @makinulimann
+                    @makinuliman
                   </a>
                 </div>
               </div>
