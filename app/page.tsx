@@ -126,7 +126,7 @@ export default function Home() {
 
         <SocialLinks />
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex justify-center mt-4 bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="text-gray-600 dark:text-gray-400" />
           </a>
