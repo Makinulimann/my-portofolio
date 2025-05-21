@@ -156,22 +156,10 @@ export default function Home() {
             </div>
             <div className="w-full md:w-2/3">
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Hai! Saya Muhammad Makinul Iman, mahasiswa Sistem Informasi di
-                Universitas Brawijaya. Saya memiliki minat dan keahlian dalam
-                pengembangan web, UI/UX Design dan juga sebagai Freelance
-                Graphic Designer.
+              Hi! I'm Muhammad Makinul Iman, an Information Systems undergraduate at Brawijaya University with a GPA of 3.79. I have a strong passion for software engineering, UI/UX design, and web development. My interests lie in building functional, user-friendly applications that combine solid backend structure with intuitive user interfaces.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Saya memiliki pengalaman dalam backend development dan membangun
-                aplikasi yang berfungsi baik. Saat ini saya aktif mengerjakan
-                beberapa project freelance dan memperdalam skill programming
-                serta desain antarmuka pengguna.
-              </p>
-              <p className="text-gray-700 dark:text-gray-300">
-                As an Information Systems undergraduate with a GPA of 3.79, I am
-                passionate about software engineering and UI/UX design. Skilled
-                in web development, responsive design, and backend systems, I
-                excel in analytical thinking and problem-solving.
+              I have hands-on experience in backend development, including building web applications and integrating secure systems. In addition to my academic pursuits, I work as a freelance graphic designer, allowing me to continuously improve my creativity and design skills. Currently, I’m actively involved in freelance projects while deepening my knowledge in programming and user interface design. I am always eager to learn, grow, and contribute to impactful digital solutions.
               </p>
             </div>
           </div>
